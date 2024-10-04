@@ -1,0 +1,38 @@
+:root {
+  //Primary
+
+  --color-very-dark-blue: #070439;
+  --color-desaturated-blue: #585989;
+
+  //Accent
+
+  --color-bright-blue: #3065f8;
+  --color-moderate-cyan: #3c9f8f;
+
+  //Neutral
+
+  --color-light-grayish-blue: #f6f6fe;
+  --color-light-gray: #bfbfbf;
+  --color-dark-gray: #413c3c;
+}
+
+html {
+  font-size: 62.5%;
+
+  margin: 0;
+  
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", "Raleway", sans-serif;
+  margin: 0;
+  
+  
+}

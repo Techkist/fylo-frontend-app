@@ -1,0 +1,59 @@
+h1 {
+  font-family: "Raleway";
+  font-size: 3.3rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: "Raleway";
+  font-size: 2.7rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  margin: 0;
+}
+
+.hero-left {
+  &__paragraph {
+    font-size: 1.48rem;
+    font-weight: 400;
+    
+  }
+}
+
+.first-section {
+  &__paragraph {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-box {
+    &__text {
+      font-size: 1.2rem;
+      font-weight: 400;
+     
+    }
+
+    .user {
+      &__name--title {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+.second-section {
+  &__paragraph {
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+   
+  }
+}
