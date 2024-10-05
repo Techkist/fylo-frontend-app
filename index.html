@@ -16,15 +16,7 @@
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: #3e52a3;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header class="header">
@@ -41,6 +33,14 @@
         </div>
       </nav>
       <section class="hero-box">
+        <div class="hero-right">
+          <img
+            src="images/illustration-1.svg"
+            alt="illustration"
+            class="hero-right__illustration"
+          />
+        </div>
+
         <div class="hero-left">
           <h1 class="hero-left__main-heading">
             All your files in one secure location, accessible anywhere.
@@ -57,6 +57,7 @@
               id="email"
               placeholder="Enter your email..."
               class="hero-left__form-text"
+              required
             />
             <input
               type="submit"
@@ -65,18 +66,19 @@
             />
           </form>
         </div>
-        <div class="hero-right">
-          <img
-            src="images/illustration-1.svg"
-            alt="illustration"
-            class="hero-right__illustration"
-          />
-        </div>
       </section>
     </header>
 
     <main>
       <section class="first-section">
+        <div class="first-section__right">
+          <img
+            src="images/illustration-2.svg"
+            alt="illustration"
+            class="first-section__right--illustration"
+          />
+        </div>
+
         <div class="first-section__left">
           <h1 class="first-section__main-heading">
             Stay productive, wherever you are
@@ -116,14 +118,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="first-section__right">
-          <img
-            src="images/illustration-2.svg"
-            alt="illustration"
-            class="first-section__right--illustration"
-          />
         </div>
       </section>
 
@@ -188,16 +182,31 @@
         </div>
 
         <div class="social-media-column">
-          <img src="images/facebook-with-circle.svg" alt="facebook icon" class="icon" />
-          <img src="images/twitter-with-circle.svg" alt="twitter icon" class="icon"/>
-          <img src="images/instagram-with-circle.svg" alt="instagram icon" class="icon"/>
+          <img
+            src="images/facebook-with-circle.svg"
+            alt="facebook icon"
+            class="icon"
+          />
+          <img
+            src="images/twitter-with-circle.svg"
+            alt="twitter icon"
+            class="icon"
+          />
+          <img
+            src="images/instagram-with-circle.svg"
+            alt="instagram icon"
+            class="icon"
+          />
         </div>
       </div>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by
+        <a href="https://github.com/Techkist/fylo-frontend-app"
+          >Enimini Aniedi Nkereuwem</a
+        >.
       </p>
     </footer>
   </body>

@@ -1,3 +1,6 @@
+$breakpoint-phone: 600px;
+$breakpoint-miniphone: 400px;
+
 :root {
   //Primary
 
@@ -20,8 +23,16 @@ html {
   font-size: 62.5%;
 
   margin: 0;
-  
+
   box-sizing: border-box;
+
+  @media only screen and (max-width: $breakpoint-phone) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $breakpoint-miniphone) {
+    font-size: 40%;
+  }
 }
 
 *,
@@ -33,6 +44,4 @@ html {
 body {
   font-family: "Open Sans", "Raleway", sans-serif;
   margin: 0;
-  
-  
 }

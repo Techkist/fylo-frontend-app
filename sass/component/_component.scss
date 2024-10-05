@@ -1,10 +1,11 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem 5rem 0 5rem;
   &__logo {
     .logo {
-      width: 15rem;
+      width: 13rem;
+
+      @media only screen and (max-width: $breakpoint-miniphone) {
+        width: 12rem;
+      }
     }
   }
 
@@ -18,7 +19,14 @@
 
         li {
           display: inline-block;
+        }
+
+        &:not(:first-of-type) {
           margin-left: 3rem;
+
+          @media only screen and (max-width: $breakpoint-miniphone) {
+            margin-left: 2rem;
+          }
         }
       }
     }
@@ -26,11 +34,22 @@
 }
 
 .hero-left {
-  width: 55rem;
+  grid-row: 1/2;
+
+  @media only screen and (max-width: $breakpoint-phone) {
+    margin-bottom: 6rem;
+  }
 
   &__paragraph {
     width: 90%;
     margin-bottom: 1.2rem;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 100%;
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 3.3rem;
+    }
   }
 
   &__form {
@@ -41,6 +60,11 @@
       outline: none;
       font-family: inherit;
       font-weight: 500;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        display: block;
+        width: 100%;
+      }
     }
 
     &-text {
@@ -48,6 +72,15 @@
       width: 50%;
       margin-right: 1rem;
       padding: 1rem 0.5rem 0.5rem 1.5rem;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 1rem 0.5rem 1rem 1.5rem;
+        font-size: 1.5rem;
+      }
     }
 
     ::-webkit-input-placeholder {
@@ -59,22 +92,49 @@
       padding: 0.75rem 4rem 0.75rem;
       color: white;
       background-color: var(--color-bright-blue);
+      cursor: pointer;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        padding: 1rem 4rem 1rem;
+      }
     }
   }
 }
 
 .hero-right {
   padding: 2.5rem 0;
+
   justify-self: flex-end;
 
+  @media only screen and (max-width: $breakpoint-phone) {
+    padding: 12rem 0 6rem;
+  }
+
   &__illustration {
-    width: 50rem;
+    float: right;
+    width: 90%;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 }
 
 .first-section {
+  &__main-heading {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+
   &__left {
-    width: 55rem;
+    grid-row: 1/2;
 
     .testimonial-box {
       background-color: white;
@@ -83,19 +143,48 @@
       border-radius: 0.5rem;
       box-shadow: 0.1rem 0.1rem 0.9rem 0.1rem var(--color-light-gray);
 
+      @media only screen and (max-width: $breakpoint-phone) {
+        width: 80%;
+        margin: 0 auto;
+        padding: 3rem;
+        margin-top: 6rem;
+      }
+
       &__text {
         margin-bottom: 1rem;
         margin-top: 0.7rem;
+
+        @media only screen and (max-width: $breakpoint-phone) {
+          font-size: 1.6rem;
+          margin: 1rem 0 1.5rem 0;
+          line-height: 2.5rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-miniphone) {
+          font-size: 1.6rem;
+        }
       }
 
       .user {
         display: flex;
         align-items: center;
+
         img {
           border-radius: 50%;
           height: 2.5rem;
           width: 2.5rem;
           margin-right: 1rem;
+
+          @media only screen and (max-width: $breakpoint-phone) {
+            height: 4rem;
+            width: 4rem;
+          }
+        }
+
+        &__name--title {
+          @media only screen and (max-width: $breakpoint-phone) {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -103,9 +192,17 @@
 
   &__reference {
     display: inline-block;
+
     position: relative;
     margin-bottom: 3rem;
     cursor: pointer;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      margin-top: 5rem;
+    }
 
     a {
       display: flex;
@@ -115,8 +212,23 @@
       color: var(--color-moderate-cyan);
       font-size: 1.3rem;
       padding: 0;
-
       text-decoration: none;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        width: 19.3rem;
+        font-size: 1.8rem;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.5rem;
+
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-moderate-cyan);
+      }
 
       img {
         width: 1.5rem;
@@ -125,18 +237,12 @@
         position: absolute;
         right: 0;
         bottom: 0;
+
+        @media only screen and (max-width: $breakpoint-phone) {
+          width: 2rem;
+          height: 2rem;
+        }
       }
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -0.5rem;
-
-      width: 100%;
-      height: 1px;
-      background-color: var(--color-moderate-cyan);
     }
   }
 
@@ -146,26 +252,64 @@
 
     &:not(:last-of-type) {
       margin-top: 3rem;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        margin-top: 3.5rem;
+      }
+    }
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 100%;
+
+      font-size: 1.8rem;
+      margin-bottom: 2.3rem;
     }
   }
 
   &__right {
     justify-self: flex-end;
     padding-top: 2rem;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      padding-bottom: 10rem;
+    }
+
     &--illustration {
-      width: 45rem;
+      float: right;
+      width: 75%;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
     }
   }
 }
 
 .second-section {
   &__paragraph {
-    width: 50rem;
+    width: 80%;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 100%;
+      font-size: 1.8rem;
+      margin-bottom: 3.3rem;
+    }
   }
 
   &__right {
     justify-self: flex-end;
-    width: 45rem;
+    width: 75%;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 100%;
+    }
 
     .input {
       display: block;
@@ -180,10 +324,18 @@
       margin-bottom: 1.3rem;
       box-shadow: 0.07rem 0.07rem 0.4rem 0.1rem var(--color-dark-gray);
 
+      @media only screen and (max-width: $breakpoint-phone) {
+        margin: 0 auto 1.5rem;
+      }
+
       &::-webkit-input-placeholder {
         font-family: "Open Sans";
         color: var(--color-light-gray);
         font-size: 1.08rem;
+
+        @media only screen and (max-width: $breakpoint-phone) {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -196,6 +348,15 @@
       border-radius: 0.3rem;
       border: none;
       box-shadow: 0.07rem 0.07rem 0.4rem 0.1rem var(--color-dark-gray);
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: $breakpoint-miniphone) {
+        font-size: 1.6rem;
+      }
     }
   }
 }
@@ -203,6 +364,11 @@
 footer {
   .footer__logo {
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      width: 20rem;
+      margin-bottom: 4rem;
+    }
   }
 
   .footer-content {
@@ -212,10 +378,22 @@ footer {
     margin-bottom: 5rem;
     color: var(--color-light-grayish-blue);
 
+    @media only screen and (max-width: $breakpoint-phone) {
+      display: block;
+    }
+
     .info-column {
+      @media only screen and (max-width: $breakpoint-phone) {
+        margin-bottom: 6rem;
+      }
+
       &__phone {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $breakpoint-phone) {
+          font-size: 2rem;
+        }
 
         &:not(:last-of-type) {
           margin-bottom: 1.5rem;
@@ -226,9 +404,20 @@ footer {
 
           margin-right: 1.5rem;
           margin-left: 0.5rem;
+
+          @media only screen and (max-width: $breakpoint-phone) {
+            width: 2rem;
+          }
         }
       }
     }
+
+    .features-column:not(:last-of-type) {
+      @media only screen and (max-width: $breakpoint-phone) {
+        margin-bottom: 6rem;
+      }
+    }
+
     .features-column__item {
       margin: 0;
 
@@ -236,7 +425,10 @@ footer {
         color: var(--color-light-grayish-blue);
         list-style-type: none;
         text-decoration: none;
-        
+
+        @media only screen and (max-width: $breakpoint-phone) {
+          font-size: 2rem;
+        }
 
         li {
           margin-bottom: 1.5rem;
@@ -245,7 +437,12 @@ footer {
     }
 
     .social-media-column {
-      
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        display: flex;
+        justify-content: center;
+      }
+
       .icon {
         margin-right: 1rem;
         width: 3rem;
@@ -255,7 +452,13 @@ footer {
         }
       }
     }
+  }
 
-    
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: var( --color-moderate-cyan)
   }
 }
