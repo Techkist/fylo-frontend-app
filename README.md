@@ -48,8 +48,8 @@ i learned the concept of grid layout properly especially where the code structur
 
 ## Author
 
-- Frontend Mentor - [@techkist](https://www.frontendmentor.io/profile/Techkist)
-- Twitter - [@techkist](https://www.twitter.com/Techkist)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/Techkist]
+- Twitter - [https://www.twitter.com/Techkist]
 
 ## Acknowledgments
 
