@@ -129,8 +129,12 @@
 
 .first-section {
   &__main-heading {
-    margin: 0;
-    font-size: 2.2rem;
+    font-size: 3.3rem;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+      margin: 0;
+      font-size: 2.2rem;
+    }
   }
 
   &__left {
@@ -276,7 +280,7 @@
 
     &--illustration {
       float: right;
-      width: 75%;
+      width: 70%;
 
       @media only screen and (max-width: $breakpoint-phone) {
         width: 100%;
@@ -437,7 +441,6 @@ footer {
     }
 
     .social-media-column {
-
       @media only screen and (max-width: $breakpoint-phone) {
         display: flex;
         justify-content: center;
@@ -459,6 +462,6 @@ footer {
     text-align: center;
   }
   .attribution a {
-    color: var( --color-moderate-cyan)
+    color: var(--color-moderate-cyan);
   }
 }
