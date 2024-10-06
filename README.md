@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Techkist/fylo-frontend-app)
-- Live Site URL: [Add live site URL here](https://techkist.github.io/fylo-frontend-app/)
+- Solution URL: [https://github.com/Techkist/fylo-frontend-app]
+- Live Site URL: [https://techkist.github.io/fylo-frontend-app/]
 
 ## My process
 
