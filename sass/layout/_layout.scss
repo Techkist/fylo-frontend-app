@@ -36,7 +36,7 @@
 }
 
 .first-section {
-  background-image: url(/images/bg-curve-desktop.svg);
+  background-image: url(../../images/bg-curve-desktop.svg);
 
   background-size: cover;
   background-position: top;
@@ -44,7 +44,7 @@
   padding-bottom: 8rem;
 
   @media only screen and (max-width: $breakpoint-phone) {
-    background-image: url(/images/bg-curve-mobile.svg);
+    background-image: url(../../images/bg-curve-mobile.svg);
     padding-top: 8rem;
     margin-bottom: 2rem;
   }
