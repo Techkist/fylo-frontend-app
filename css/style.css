@@ -140,7 +140,8 @@ p {
     margin-bottom: 3.3rem;
   }
 }
-.hero-left__form-text, .hero-left__form-submit {
+.hero-left__form-text,
+.hero-left__form-submit {
   vertical-align: middle;
   border-radius: 0.5rem;
   outline: none;
@@ -148,7 +149,8 @@ p {
   font-weight: 500;
 }
 @media only screen and (max-width: 600px) {
-  .hero-left__form-text, .hero-left__form-submit {
+  .hero-left__form-text,
+  .hero-left__form-submit {
     display: block;
     width: 100%;
   }
@@ -572,7 +574,7 @@ footer .attribution a {
 }
 
 .first-section {
-  background-image: url(../../images/bg-curve-desktop.svg);
+  background-image: url(../images/bg-curve-desktop.svg);
   background-size: cover;
   background-position: top;
   padding-top: 12rem;
@@ -580,7 +582,7 @@ footer .attribution a {
 }
 @media only screen and (max-width: 600px) {
   .first-section {
-    background-image: url(../../images/bg-curve-mobile.svg);
+    background-image: url(../images/bg-curve-mobile.svg);
     padding-top: 8rem;
     margin-bottom: 2rem;
   }
